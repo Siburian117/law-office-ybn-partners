@@ -116,3 +116,26 @@ footer{
     text-align:center;
     padding:40px;
 }
+.button:hover{
+
+background:#b88d1b;
+
+color:white;
+
+transition:.3s;
+
+}
+
+nav a:hover{
+
+color:#d4af37;
+
+}
+
+.card:hover{
+
+transform:translateY(-10px);
+
+transition:.4s;
+
+}
