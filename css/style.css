@@ -1,221 +1,360 @@
-/* ===========================
+/* ==========================
    LAW OFFICE YBN & PARTNERS
-=========================== */
+========================== */
 
 *{
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial,Helvetica,sans-serif;
-}
-
-html{
-    scroll-behavior:smooth;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body{
+
     background:#f5f5f5;
     color:#222;
-    line-height:1.7;
+    line-height:1.6;
+
 }
 
-header{
+/* ==========================
+        NAVBAR
+========================== */
+
+.navbar{
+
     position:fixed;
-    width:100%;
     top:0;
     left:0;
-    z-index:999;
+    width:100%;
+
+    background:#111;
+
+    padding:18px 8%;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:20px 8%;
-    background:#111;
+
+    z-index:999;
+
+    box-shadow:0 3px 12px rgba(0,0,0,.2);
+
 }
 
 .logo{
-    color:#d4af37;
-    font-size:30px;
+
+    color:white;
+    font-size:24px;
     font-weight:bold;
+
+}
+
+.logo span{
+
+    color:#d4af37;
+
 }
 
 nav a{
+
     color:white;
     text-decoration:none;
-    margin-left:25px;
+
+    margin-left:28px;
+
+    font-weight:600;
+
     transition:.3s;
+
 }
 
 nav a:hover{
+
     color:#d4af37;
+
 }
 
-.hero{
-    height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    color:white;
-    background:linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
-    url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1800&q=80");
+.active{
+
+    color:#d4af37;
+
+}
+
+/* ==========================
+      HERO SECTION
+========================== */
+
+.hero-lawyer{
+
+    margin-top:90px;
+
+    background:linear-gradient(rgba(0,0,0,.75),rgba(0,0,0,.75)),
+    url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1600&q=80");
+
     background-size:cover;
+
     background-position:center;
-}
 
-.hero h1{
-    font-size:65px;
-    margin-bottom:20px;
-}
+    color:white;
 
-.hero p{
-    font-size:22px;
-    margin-bottom:35px;
-}
-
-.button{
-    display:inline-block;
-    background:#d4af37;
-    color:black;
-    text-decoration:none;
-    padding:15px 40px;
-    border-radius:8px;
-    font-weight:bold;
-}
-
-section{
-    padding:90px 10%;
-}
-
-.title{
     text-align:center;
-    font-size:42px;
-    margin-bottom:50px;
+
+    padding:120px 20px;
+
 }
 
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:30px;
+.hero-lawyer h1{
+
+    font-size:52px;
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
 }
+
+.hero-lawyer p{
+
+    max-width:850px;
+
+    margin:auto;
+
+    font-size:18px;
+
+}
+
+/* ==========================
+       TEAM SECTION
+========================== */
+
+.team{
+
+    width:90%;
+
+    max-width:1300px;
+
+    margin:80px auto;
+
+}
+
+.team h2{
+
+    text-align:center;
+
+    color:#222;
+
+    font-size:38px;
+
+    margin-bottom:45px;
+
+    position:relative;
+
+}
+
+.team h2::after{
+
+    content:"";
+
+    width:90px;
+
+    height:4px;
+
+    background:#d4af37;
+
+    display:block;
+
+    margin:15px auto;
+
+}
+
+/* ==========================
+      GRID
+========================== */
+
+.team-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+}
+
+/* ==========================
+      CARD
+========================== */
 
 .card{
+
     background:white;
-    padding:30px;
+
     border-radius:15px;
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-    transition:.3s;
-}
 
-.card:hover{
-    transform:translateY(-8px);
-}
+    overflow:hidden;
 
-footer{
-    background:#111;
-    color:white;
     text-align:center;
-    padding:40px;
-}
-.button:hover{
 
-background:#b88d1b;
+    transition:.35s;
 
-color:white;
-
-transition:.3s;
-
-}
-
-nav a:hover{
-
-color:#d4af37;
+    box-shadow:0 10px 30px rgba(0,0,0,.10);
 
 }
 
 .card:hover{
 
-transform:translateY(-10px);
+    transform:translateY(-12px);
 
-transition:.4s;
-
-}
-.team-page{
-    margin-top:120px;
-    padding:80px 10%;
-}
-
-.section-title{
-    text-align:center;
-    color:#d4af37;
-    font-size:36px;
-    margin:60px 0 35px;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    gap:35px;
-}
-
-.lawyer-card{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    padding:30px;
-
-    text-align:center;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.10);
-
-    transition:.3s;
+    box-shadow:0 20px 45px rgba(0,0,0,.25);
 
 }
 
-.lawyer-card:hover{
+.card img{
 
-    transform:translateY(-10px);
+    width:100%;
 
-}
-
-.lawyer-card img{
-
-    width:220px;
-
-    height:220px;
+    height:350px;
 
     object-fit:cover;
 
-    border-radius:15px;
+}
 
-    border:5px solid #d4af37;
+.card h3{
 
-    margin-bottom:20px;
+    margin-top:25px;
+
+    font-size:24px;
+
+    color:#222;
+
+    padding:0 20px;
 
 }
 
-.lawyer-card h3{
+.card span{
 
-    margin-bottom:10px;
+    display:inline-block;
 
-}
+    margin:20px 0 30px;
 
-.lawyer-card p{
+    padding:10px 24px;
 
-    color:#666;
+    background:#d4af37;
+
+    color:#111;
+
+    border-radius:40px;
 
     font-weight:bold;
 
 }
 
-@media(max-width:768px){
+/* ==========================
+      FOOTER
+========================== */
 
-.lawyer-card img{
+footer{
 
-width:180px;
+    background:#111;
 
-height:180px;
+    color:white;
+
+    text-align:center;
+
+    padding:50px 20px;
+
+}
+
+footer h3{
+
+    color:#d4af37;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    margin:8px 0;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media(max-width:900px){
+
+.navbar{
+
+flex-direction:column;
+
+}
+
+nav{
+
+margin-top:15px;
+
+}
+
+nav a{
+
+margin:10px;
+
+display:inline-block;
+
+}
+
+.hero-lawyer h1{
+
+font-size:38px;
+
+}
+
+.hero-lawyer{
+
+padding:90px 20px;
+
+}
+
+.card img{
+
+height:300px;
+
+}
+
+}
+
+@media(max-width:600px){
+
+.team{
+
+width:95%;
+
+}
+
+.hero-lawyer h1{
+
+font-size:30px;
+
+}
+
+.hero-lawyer p{
+
+font-size:16px;
+
+}
+
+.card img{
+
+height:260px;
+
+}
+
+.card h3{
+
+font-size:20px;
 
 }
 
