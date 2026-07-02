@@ -1,312 +1,204 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Law Office YBN & Partners</title>
+<title>LAW OFFICE YBN & PARTNERS</title>
 
-<meta name="description" content="Law Office YBN & Partners - Professional Legal Services">
+<style>
 
-<link rel="stylesheet" href="css/style.css">
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+body{
+background:#f8f8f8;
+color:#222;
+}
 
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+header{
+background:#111;
+color:white;
+padding:20px 10%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+color:#d4af37;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+}
+
+.hero{
+height:90vh;
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url("https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1500&q=80");
+background-size:cover;
+background-position:center;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
+padding:20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#d4af37;
+color:black;
+text-decoration:none;
+font-weight:bold;
+border-radius:8px;
+}
+
+section{
+padding:80px 10%;
+}
+
+.title{
+text-align:center;
+font-size:40px;
+margin-bottom:50px;
+color:#111;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- ================= NAVBAR ================= -->
-
-<header class="header">
-
-<div class="container nav-container">
+<header>
 
 <div class="logo">
-
-<h2>YBN & PARTNERS</h2>
-
+LAW OFFICE YBN & PARTNERS
 </div>
 
 <nav>
 
-<ul>
+<a href="#">Home</a>
 
-<li><a href="#home">Home</a></li>
+<a href="#">Tentang</a>
 
-<li><a href="#about">About</a></li>
+<a href="#">Layanan</a>
 
-<li><a href="#services">Services</a></li>
+<a href="#">Lawyer</a>
 
-<li><a href="#team">Our Team</a></li>
+<a href="#">Artikel</a>
 
-<li><a href="#contact">Contact</a></li>
-
-</ul>
+<a href="#">Kontak</a>
 
 </nav>
 
-</div>
-
 </header>
 
-<!-- ================= HERO ================= -->
+<section class="hero">
 
-<section class="hero" id="home">
-
-<img src="images/ybn-hero.jpg" class="hero-image" alt="YBN">
-
-<div class="hero-overlay"></div>
-
-<div class="hero-content">
-
-<h4>WELCOME TO</h4>
+<div>
 
 <h1>LAW OFFICE<br>YBN & PARTNERS</h1>
 
 <p>
-
-Professional Legal Services with Integrity, Excellence and Commitment.
-
+Profesional • Berintegritas • Terpercaya
 </p>
 
-<div class="hero-button">
-
-<a href="#services" class="btn-primary">
-
-OUR SERVICES
-
-</a>
-
-<a href="#contact" class="btn-secondary">
-
-FREE CONSULTATION
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= ABOUT ================= -->
-
-<section id="about" class="section">
-
-<div class="container">
-
-<h2 class="section-title">
-
-ABOUT US
-
-</h2>
-
-<p class="section-text">
-
-Law Office YBN & Partners hadir memberikan pelayanan hukum yang profesional,
-berintegritas, serta mengutamakan kepentingan klien baik dalam litigasi maupun non litigasi.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="section light">
-
-<div class="container">
-
-<h2 class="section-title">
-
-LEGAL SERVICES
-
-</h2>
-
-<div class="service-grid">
-
-<div class="service-box">
-
-<h3>Corporate Law</h3>
-
-<p>Konsultasi dan pendampingan perusahaan.</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Litigation</h3>
-
-<p>Penyelesaian perkara Perdata & Pidana.</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Family Law</h3>
-
-<p>Perceraian, Waris dan Hak Asuh Anak.</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Land Dispute</h3>
-
-<p>Sengketa Pertanahan dan Properti.</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Legal Opinion</h3>
-
-<p>Pendapat hukum dan due diligence.</p>
-
-</div>
-
-<div class="service-box">
-
-<h3>Business Contract</h3>
-
-<p>Penyusunan dan Review Perjanjian.</p>
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- ================= TEAM ================= -->
-
-<section id="team" class="section">
-
-<div class="container">
-
-<h2 class="section-title">
-
-OUR LAWYERS
-
-</h2>
-
-<p class="section-text">
-
-Experienced Advocates Ready to Assist You.
-
-</p>
-
-<a href="team.html" class="btn-primary">
-
-VIEW OUR TEAM
-
+<a class="btn" href="#">
+Konsultasi Sekarang
 </a>
 
 </div>
 
 </section>
 
-<!-- ================= CONTACT ================= -->
+<section>
 
-<section id="contact" class="section light">
-
-<div class="container">
-
-<h2 class="section-title">
-
-CONTACT US
-
+<h2 class="title">
+Layanan Hukum
 </h2>
 
+<div class="cards">
+
+<div class="card">
+<h3>Hukum Perdata</h3>
 <p>
-
-Office : Law Office YBN & Partners
-
+Wanprestasi, PMH, Sengketa Tanah, Waris.
 </p>
+</div>
 
+<div class="card">
+<h3>Hukum Pidana</h3>
 <p>
-
-WhatsApp : +62 xxx xxxx xxxx
-
+Pendampingan sejak penyidikan hingga persidangan.
 </p>
+</div>
 
+<div class="card">
+<h3>Perceraian</h3>
 <p>
-
-Email : info@ybnpartners.com
-
+Cerai, Hak Asuh Anak, Harta Bersama.
 </p>
+</div>
 
-<br>
-
-<a class="btn-primary"
-
-href="https://wa.me/62xxxxxxxxxx">
-
-CONSULT NOW
-
-</a>
+<div class="card">
+<h3>Konsultasi Hukum</h3>
+<p>
+Online maupun Offline.
+</p>
+</div>
 
 </div>
 
 </section>
-
-<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<div class="container">
-
-<p>
-
-</p>
-
-</div>
-
-</footer>
-
-</body>
-
-</html>
-
-<h2>LAW OFFICE YBN & PARTNERS</h2>
-
-<br>
-
-<p>
-
-WhatsApp
-</p>
-085270023382 (Julya Siburian, S.H., M.H.)
-</p>
-081388882824 (Kevin Octovian Hutapea, S.H., M.H.)
-</p>
-081269906847 (Yetti Simamora, S.H., M.H.)
-
-</p>
-
-<p>
-
-Email : ybnlawoffice@gmail.com
-</p>
-Alamat : Jl Pemuda No. 6 Rawamangun, Jakarta Timur
-</p>
-
-<br>
-
-<p>
-
 © 2026 LAW OFFICE YBN & PARTNERS
 
-</p>
-
-</footer>>
+</footer>
 
 </body>
 </html>
