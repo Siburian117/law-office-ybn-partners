@@ -1,639 +1,1013 @@
-/* ==========================================
-   LAW OFFICE YBN & PARTNERS
-   STYLE.CSS
-========================================== */
+/*==================================================
+        YBN & PARTNERS PREMIUM WEBSITE
+        VERSION 2.0
+==================================================*/
 
-/* RESET */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/*========================
+        RESET
+=========================*/
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
 
-    font-family:Arial, Helvetica, sans-serif;
+font-family:'Poppins',sans-serif;
 
-    background:#f7f7f7;
+background:#fafafa;
 
-    color:#222;
+color:#222;
 
-    line-height:1.7;
+overflow-x:hidden;
+
+line-height:1.7;
 
 }
 
-/* ===============================
-        CONTAINER
-================================ */
+/*========================
+    GLOBAL CONTAINER
+=========================*/
 
 .container{
 
-    width:90%;
+width:90%;
 
-    max-width:1200px;
+max-width:1250px;
 
-    margin:auto;
+margin:auto;
 
 }
 
-/* ===============================
-          NAVBAR
-================================ */
+/*========================
+        HEADER
+=========================*/
 
 header{
 
-    position:fixed;
+position:fixed;
 
-    top:0;
+top:0;
 
-    left:0;
+left:0;
 
-    width:100%;
+width:100%;
 
-    background:#111;
+display:flex;
 
-    display:flex;
+justify-content:space-between;
 
-    justify-content:space-between;
+align-items:center;
 
-    align-items:center;
+padding:22px 8%;
 
-    padding:18px 8%;
+z-index:9999;
 
-    z-index:999;
+background:rgba(0,0,0,.25);
 
-    box-shadow:0 4px 15px rgba(0,0,0,.2);
+backdrop-filter:blur(12px);
+
+transition:.35s;
 
 }
 
+header.scrolled{
+
+background:#111;
+
+padding:16px 8%;
+
+box-shadow:0 5px 18px rgba(0,0,0,.25);
+
+}
+
+/*========================
+        LOGO
+=========================*/
+
 .logo{
 
-    font-size:26px;
+font-family:'Cinzel',serif;
 
-    color:white;
+font-size:30px;
 
-    font-weight:bold;
+font-weight:700;
 
-    letter-spacing:1px;
+letter-spacing:2px;
+
+color:white;
+
+cursor:pointer;
 
 }
 
 .logo span{
 
-    color:#d4af37;
+color:#d4af37;
 
 }
 
+/*========================
+        NAVIGATION
+=========================*/
+
 nav{
 
-    display:flex;
+display:flex;
 
-    gap:30px;
+gap:32px;
 
 }
 
 nav a{
 
-    color:white;
+color:white;
 
-    text-decoration:none;
+text-decoration:none;
 
-    font-weight:600;
+font-weight:500;
 
-    transition:.3s;
+font-size:15px;
+
+transition:.3s;
+
+position:relative;
 
 }
 
 nav a:hover{
 
-    color:#d4af37;
+color:#d4af37;
 
 }
 
-.active{
+nav a::after{
 
-    color:#d4af37;
+content:"";
+
+position:absolute;
+
+left:0;
+
+bottom:-6px;
+
+width:0;
+
+height:2px;
+
+background:#d4af37;
+
+transition:.3s;
 
 }
 
-/* ===============================
-            HERO
-================================ */
+nav a:hover::after{
+
+width:100%;
+
+}
+
+/*========================
+        HERO
+=========================*/
 
 .hero-lawyer{
-    background:
-    linear-gradient(
-        rgba(0,0,0,.72),
-        rgba(0,0,0,.72)
-    ),
-    url("../images/justice.jpg");
-    background-size: cover;
-    background-position: center;
-}
 
-    background-size:cover;
+height:100vh;
 
-    background-position:center;
+display:flex;
 
-    padding:130px 20px;
+align-items:center;
 
-    text-align:center;
+justify-content:center;
 
-    color:white;
+text-align:center;
+
+background:
+
+linear-gradient(
+
+rgba(0,0,0,.72),
+
+rgba(0,0,0,.72)
+
+),
+
+url("images/justice.jpg");
+
+background-size:cover;
+
+background-position:center;
+
+background-attachment:fixed;
+
+color:white;
+
+padding:0 20px;
 
 }
 
 .hero-lawyer h1{
 
-    font-size:58px;
+font-family:'Cinzel',serif;
 
-    color:#d4af37;
+font-size:72px;
 
-    margin-bottom:20px;
+color:#d4af37;
 
-    letter-spacing:2px;
+letter-spacing:3px;
+
+margin-bottom:25px;
 
 }
 
 .hero-lawyer p{
 
-    max-width:850px;
+max-width:820px;
 
-    margin:auto;
+margin:auto;
 
-    font-size:20px;
+font-size:22px;
 
-}
-
-/* ===============================
-          SECTION
-================================ */
-
-section{
-
-    padding:80px 0;
+font-weight:300;
 
 }
 
-section h2{
-
-    text-align:center;
-
-    font-size:40px;
-
-    color:#222;
-
-    margin-bottom:45px;
-
-    position:relative;
-
-}
-
-section h2::after{
-
-    content:"";
-
-    width:80px;
-
-    height:4px;
-
-    background:#d4af37;
-
-    display:block;
-
-    margin:18px auto;
-
-}
-
-/* ===============================
-      MANAGING PARTNER
-================================ */
-
-.managing{
-
-    display:flex;
-
-    justify-content:center;
-
-}
-
-.managing-card{
-
-    width:360px;
-
-    background:white;
-
-    border-radius:16px;
-
-    overflow:hidden;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.15);
-
-    transition:.35s;
-
-}
-
-.managing-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.managing-card img{
-
-    width:100%;
-
-    aspect-ratio:4/5;
-
-    object-fit:cover;
-
-}
-
-.managing-card h3{
-
-    margin-top:25px;
-
-    text-align:center;
-
-    font-size:28px;
-
-    color:#222;
-
-}
-
-.managing-card p{
-
-    text-align:center;
-
-    margin:20px;
-
-    background:#d4af37;
-
-    padding:12px;
-
-    border-radius:30px;
-
-    font-weight:bold;
-
-}
-
-/* ===============================
-       PARTNER GRID
-================================ */
-
-.partner-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:35px;
-
-}
-/* ===============================
-        PARTNER CARD
-================================ */
-
-.partner-card{
-
-    background:#fff;
-
-    border-radius:18px;
-
-    overflow:hidden;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.12);
-
-    transition:.35s;
-
-}
-
-.partner-card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:0 18px 40px rgba(0,0,0,.20);
-
-}
-
-.partner-card img{
-
-    width:100%;
-
-    aspect-ratio:4/5;
-
-    object-fit:cover;
-
-    display:block;
-
-}
-
-.partner-card h3{
-
-    text-align:center;
-
-    margin:22px 15px 10px;
-
-    font-size:24px;
-
-    color:#222;
-
-}
-
-.partner-card p{
-
-    text-align:center;
-
-    margin-bottom:28px;
-
-    color:#666;
-
-    font-weight:bold;
-
-}
-
-.partner-card span{
-
-    display:inline-block;
-
-    margin-top:10px;
-
-    padding:8px 24px;
-
-    background:#d4af37;
-
-    color:#111;
-
-    border-radius:30px;
-
-}
-
-/* ===============================
-      JUNIOR ASSOCIATE
-================================ */
-
-.junior-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.junior-card{
-
-    background:#fff;
-
-    border-left:6px solid #d4af37;
-
-    padding:35px;
-
-    border-radius:12px;
-
-    box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-    transition:.3s;
-
-}
-
-.junior-card:hover{
-
-    transform:translateY(-8px);
-
-}
-
-.junior-card h3{
-
-    font-size:23px;
-
-    margin-bottom:15px;
-
-    color:#222;
-
-}
-
-.junior-card p{
-
-    color:#666;
-
-    font-weight:bold;
-
-}
-
-/* ===============================
-          BUTTON
-================================ */
+/*========================
+      BUTTON
+=========================*/
 
 .btn{
 
-    display:inline-block;
+display:inline-block;
 
-    background:#d4af37;
+margin-top:35px;
 
-    color:#111;
+padding:15px 42px;
 
-    padding:14px 32px;
+border-radius:50px;
 
-    border-radius:40px;
+background:#d4af37;
 
-    text-decoration:none;
+color:#111;
 
-    font-weight:bold;
+text-decoration:none;
 
-    transition:.3s;
+font-weight:600;
+
+transition:.35s;
+
+border:2px solid #d4af37;
 
 }
 
 .btn:hover{
 
-    background:#111;
+background:transparent;
 
-    color:white;
+color:white;
 
-}
+border:2px solid white;
 
-/* ===============================
-           FOOTER
-================================ */
+transform:translateY(-4px);
 
-footer{
+} 
+/*==================================================
+                SECTION GLOBAL
+==================================================*/
 
-    background:#111;
+section{
 
-    color:white;
+padding:100px 0;
 
-    text-align:center;
+position:relative;
 
-    padding:60px 20px;
-
-    margin-top:80px;
-
-}
-
-footer h3{
-
-    color:#d4af37;
-
-    font-size:28px;
-
-    margin-bottom:20px;
+background:#fff;
 
 }
 
-footer p{
+section:nth-child(even){
 
-    margin:8px 0;
-
-    color:#ddd;
-
-}
-/* ===================================
-        HOVER & ANIMATION
-=================================== */
-
-.partner-card,
-.managing-card,
-.junior-card{
-
-    transition:all .35s ease;
+background:#f8f8f8;
 
 }
 
-.partner-card:hover,
-.managing-card:hover,
-.junior-card:hover{
+section h2{
 
-    transform:translateY(-10px);
+font-family:'Cinzel',serif;
 
-}
+font-size:46px;
 
-.partner-card img,
-.managing-card img{
+font-weight:700;
 
-    transition:transform .5s ease;
+text-align:center;
 
-}
+color:#222;
 
-.partner-card:hover img,
-.managing-card:hover img{
+margin-bottom:15px;
 
-    transform:scale(1.05);
+letter-spacing:2px;
 
 }
 
-/* ===================================
-          GOLD LINE
-=================================== */
+.subtitle{
+
+max-width:900px;
+
+margin:25px auto 60px;
+
+text-align:center;
+
+font-size:18px;
+
+color:#666;
+
+line-height:1.9;
+
+}
+
+/*==================================================
+                GOLD DIVIDER
+==================================================*/
 
 .gold-line{
 
-    width:90px;
+width:100px;
 
-    height:4px;
+height:5px;
 
-    background:#d4af37;
+background:#d4af37;
 
-    margin:15px auto 50px;
+margin:20px auto 50px;
 
-    border-radius:5px;
-
-}
-
-/* ===================================
-        CARD TITLE
-=================================== */
-
-.partner-card h3,
-.managing-card h3{
-
-    min-height:70px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:0 15px;
-
-    text-align:center;
+border-radius:10px;
 
 }
 
-.junior-card h3{
+/*==================================================
+                ABOUT
+==================================================*/
 
-    min-height:60px;
+.about-grid{
 
-    display:flex;
+display:grid;
 
-    align-items:center;
+grid-template-columns:repeat(2,1fr);
+
+gap:60px;
+
+align-items:center;
 
 }
 
-/* ===================================
-        SHADOW
-=================================== */
+.about-box{
+
+background:#fff;
+
+padding:40px;
+
+border-radius:18px;
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+}
+
+.about-box:hover{
+
+transform:translateY(-8px);
+
+}
+
+.about-box h3{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#d4af37;
+
+font-family:'Cinzel',serif;
+
+}
+
+.about-box p{
+
+font-size:16px;
+
+line-height:1.9;
+
+color:#555;
+
+}
+
+/*==================================================
+                SERVICES GRID
+==================================================*/
+
+.partner-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:35px;
+
+align-items:stretch;
+
+}
+
+/*==================================================
+                CARD
+==================================================*/
 
 .partner-card{
 
-    box-shadow:0 12px 30px rgba(0,0,0,.08);
+background:#fff;
+
+border-radius:18px;
+
+overflow:hidden;
+
+border:1px solid rgba(212,175,55,.18);
+
+box-shadow:0 15px 35px rgba(0,0,0,.08);
+
+transition:.35s;
+
+display:flex;
+
+flex-direction:column;
+
+height:100%;
+
+}
+
+.partner-card:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 20px 45px rgba(0,0,0,.18);
+
+}
+
+.partner-card img{
+
+width:100%;
+
+height:320px;
+
+object-fit:cover;
+
+transition:.4s;
+
+}
+
+.partner-card:hover img{
+
+transform:scale(1.05);
+
+}
+
+.partner-card h3{
+
+font-family:'Cinzel',serif;
+
+font-size:24px;
+
+padding:25px 25px 10px;
+
+color:#222;
+
+text-align:center;
+
+}
+
+.partner-card p{
+
+padding:0 25px 30px;
+
+text-align:center;
+
+color:#666;
+
+line-height:1.8;
+
+flex:1;
+
+}
+
+/*==================================================
+                MANAGING PARTNER
+==================================================*/
+
+.managing{
+
+display:flex;
+
+justify-content:center;
+
+margin-top:30px;
 
 }
 
 .managing-card{
 
-    box-shadow:0 15px 35px rgba(0,0,0,.15);
+width:420px;
+
+background:#fff;
+
+border-radius:20px;
+
+overflow:hidden;
+
+border:1px solid rgba(212,175,55,.2);
+
+box-shadow:0 20px 45px rgba(0,0,0,.12);
+
+transition:.35s;
+
+}
+
+.managing-card:hover{
+
+transform:translateY(-10px);
+
+}
+
+.managing-card img{
+
+width:100%;
+
+height:520px;
+
+object-fit:cover;
+
+transition:.4s;
+
+}
+
+.managing-card:hover img{
+
+transform:scale(1.03);
+
+}
+
+.managing-card h3{
+
+font-family:'Cinzel',serif;
+
+font-size:30px;
+
+text-align:center;
+
+margin-top:25px;
+
+color:#222;
+
+}
+
+.managing-card p{
+
+text-align:center;
+
+margin:20px 30px 30px;
+
+padding:12px;
+
+border-radius:50px;
+
+background:#d4af37;
+
+font-weight:600;
+
+}
+
+/*==================================================
+                JUNIOR
+==================================================*/
+
+.junior-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
 
 }
 
 .junior-card{
 
-    box-shadow:0 8px 18px rgba(0,0,0,.08);
+background:#fff;
+
+padding:35px;
+
+border-left:6px solid #d4af37;
+
+border-radius:15px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+
+transition:.35s;
 
 }
 
-/* ===================================
-       RESPONSIVE TABLET
-=================================== */
+.junior-card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.junior-card h3{
+
+font-family:'Cinzel',serif;
+
+font-size:22px;
+
+margin-bottom:15px;
+
+color:#222;
+
+}
+
+.junior-card p{
+
+color:#666;
+
+line-height:1.8;
+
+} 
+/*==================================================
+            CONTACT SECTION
+==================================================*/
+
+.contact-wrapper{
+
+display:grid;
+
+grid-template-columns:repeat(2,1fr);
+
+gap:60px;
+
+align-items:flex-start;
+
+}
+
+.contact-form{
+
+background:#fff;
+
+padding:45px;
+
+border-radius:18px;
+
+box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+}
+
+.contact-form h3{
+
+font-family:'Cinzel',serif;
+
+font-size:28px;
+
+margin-bottom:30px;
+
+color:#222;
+
+}
+
+.contact-form input,
+.contact-form textarea{
+
+width:100%;
+
+padding:16px 18px;
+
+margin-bottom:20px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:15px;
+
+font-family:'Poppins',sans-serif;
+
+transition:.3s;
+
+outline:none;
+
+background:#fafafa;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+border-color:#d4af37;
+
+box-shadow:0 0 12px rgba(212,175,55,.25);
+
+background:#fff;
+
+}
+
+.contact-form textarea{
+
+resize:vertical;
+
+min-height:180px;
+
+}
+
+.contact-info{
+
+background:#111;
+
+padding:45px;
+
+border-radius:18px;
+
+color:#fff;
+
+}
+
+.contact-info h3{
+
+font-family:'Cinzel',serif;
+
+font-size:28px;
+
+margin-bottom:25px;
+
+color:#d4af37;
+
+}
+
+.contact-info p{
+
+margin-bottom:18px;
+
+line-height:1.8;
+
+}
+
+.contact-info iframe{
+
+width:100%;
+
+height:320px;
+
+border:0;
+
+border-radius:15px;
+
+margin-top:25px;
+
+}
+
+/*==================================================
+            FOOTER
+==================================================*/
+
+footer{
+
+background:#0d0d0d;
+
+color:#ddd;
+
+padding:70px 0 25px;
+
+border-top:5px solid #d4af37;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr 1.5fr;
+
+gap:40px;
+
+}
+
+.footer-title{
+
+font-family:'Cinzel',serif;
+
+font-size:28px;
+
+color:#fff;
+
+margin-bottom:20px;
+
+}
+
+.footer-grid h4{
+
+color:#d4af37;
+
+margin-bottom:20px;
+
+font-size:18px;
+
+}
+
+.footer-grid ul{
+
+list-style:none;
+
+}
+
+.footer-grid li{
+
+margin-bottom:12px;
+
+}
+
+.footer-grid a{
+
+color:#ddd;
+
+text-decoration:none;
+
+transition:.3s;
+
+}
+
+.footer-grid a:hover{
+
+color:#d4af37;
+
+padding-left:5px;
+
+}
+
+.footer-bottom{
+
+margin-top:50px;
+
+padding-top:25px;
+
+border-top:1px solid rgba(255,255,255,.15);
+
+text-align:center;
+
+font-size:14px;
+
+}
+
+/*==================================================
+        WHATSAPP FLOATING BUTTON
+==================================================*/
+
+.whatsapp-float{
+
+position:fixed;
+
+right:25px;
+
+bottom:25px;
+
+width:65px;
+
+height:65px;
+
+background:#25D366;
+
+border-radius:50%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:30px;
+
+color:white;
+
+text-decoration:none;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
+z-index:9999;
+
+transition:.3s;
+
+}
+
+.whatsapp-float:hover{
+
+transform:scale(1.1);
+
+}
+
+/*==================================================
+        BACK TO TOP
+==================================================*/
+
+.back-top{
+
+position:fixed;
+
+left:25px;
+
+bottom:25px;
+
+width:55px;
+
+height:55px;
+
+background:#d4af37;
+
+border-radius:50%;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+text-decoration:none;
+
+color:#111;
+
+font-weight:bold;
+
+font-size:22px;
+
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.back-top:hover{
+
+transform:translateY(-5px);
+
+}
+
+/*==================================================
+        FADE ANIMATION
+==================================================*/
+
+.fade{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:1s;
+
+}
+
+.fade.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/*==================================================
+        RESPONSIVE
+==================================================*/
 
 @media(max-width:992px){
 
-.partner-grid{
+.partner-grid,
+.junior-grid,
+.footer-grid,
+.contact-wrapper,
+.about-grid{
 
-grid-template-columns:repeat(2,1fr);
-
-}
-
-.junior-grid{
-
-grid-template-columns:repeat(2,1fr);
-
-}
-
-header{
-
-padding:18px 5%;
+grid-template-columns:1fr 1fr;
 
 }
 
 .hero-lawyer h1{
 
-font-size:46px;
+font-size:56px;
 
 }
 
 }
-
-/* ===================================
-       RESPONSIVE MOBILE
-=================================== */
 
 @media(max-width:768px){
 
@@ -641,15 +1015,7 @@ header{
 
 flex-direction:column;
 
-padding:20px;
-
-}
-
-.logo{
-
-margin-bottom:15px;
-
-text-align:center;
+padding:18px;
 
 }
 
@@ -663,15 +1029,33 @@ gap:15px;
 
 }
 
-.partner-grid{
+.partner-grid,
+.junior-grid,
+.footer-grid,
+.contact-wrapper,
+.about-grid{
 
 grid-template-columns:1fr;
 
 }
 
-.junior-grid{
+.hero-lawyer{
 
-grid-template-columns:1fr;
+background-attachment:scroll;
+
+padding:0 25px;
+
+}
+
+.hero-lawyer h1{
+
+font-size:38px;
+
+}
+
+.hero-lawyer p{
+
+font-size:17px;
 
 }
 
@@ -679,355 +1063,97 @@ grid-template-columns:1fr;
 
 width:100%;
 
-max-width:380px;
+max-width:420px;
 
 margin:auto;
 
 }
 
-.hero-lawyer{
+.contact-form,
+.contact-info{
 
-padding:90px 20px;
-
-}
-
-.hero-lawyer h1{
-
-font-size:34px;
-
-}
-
-.hero-lawyer p{
-
-font-size:16px;
+padding:30px;
 
 }
 
 section{
 
-padding:60px 20px;
+padding:70px 0;
 
 }
 
-section h2{
-
-font-size:30px;
-
 }
 
-.partner-card h3{
+@media(max-width:480px){
 
-font-size:22px;
-
-}
-
-.managing-card h3{
+.logo{
 
 font-size:24px;
 
 }
 
-}
+section h2{
 
-/* ===================================
-        SMALL MOBILE
-=================================== */
-
-@media(max-width:480px){
-
-.hero-lawyer h1{
-
-font-size:28px;
-
-}
-
-.logo{
-
-font-size:22px;
-
-}
-
-nav a{
-
-font-size:15px;
-
-}
-
-.partner-card h3{
-
-font-size:20px;
-
-}
-
-.junior-card h3{
-
-font-size:20px;
-
-}
-
-footer{
-
-padding:40px 20px;
-
-}
-
-}
-/* ===================================
-        SCROLLBAR
-=================================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#f1f1f1;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#d4af37;
-
-    border-radius:20px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#b89225;
-
-}
-
-/* ===================================
-        TEXT SELECTION
-=================================== */
-
-::selection{
-
-    background:#d4af37;
-
-    color:#111;
-
-}
-
-/* ===================================
-        SMOOTH ANIMATION
-=================================== */
-
-img{
-
-    max-width:100%;
-
-    display:block;
-
-}
-
-a{
-
-    transition:.3s;
-
-}
-
-button{
-
-    transition:.3s;
-
-    cursor:pointer;
-
-}
-
-/* ===================================
-        SECTION SPACING
-=================================== */
-
-.team{
-
-    margin-top:40px;
-
-    margin-bottom:80px;
-
-}
-
-.partner-grid{
-
-    align-items:stretch;
-
-}
-
-.partner-card{
-
-    height:100%;
-
-    display:flex;
-
-    flex-direction:column;
-
-}
-
-.partner-card h3{
-
-    flex:1;
-
-}
-
-.partner-card p{
-
-    margin-top:10px;
-
-}
-
-.managing-card{
-
-    margin:auto;
-
-}
-
-/* ===================================
-        TITLE STYLE
-=================================== */
-
-.title{
-
-    text-align:center;
-
-    font-size:52px;
-
-    color:#111;
-
-    margin-bottom:20px;
-
-    font-weight:700;
+font-size:32px;
 
 }
 
 .subtitle{
 
-    text-align:center;
-
-    color:#777;
-
-    font-size:18px;
-
-    margin-bottom:60px;
+font-size:15px;
 
 }
 
-/* ===================================
-       GOLD DIVIDER
-=================================== */
+.btn{
 
-.divider{
-
-    width:120px;
-
-    height:5px;
-
-    background:#d4af37;
-
-    margin:20px auto 60px;
-
-    border-radius:20px;
+padding:13px 28px;
 
 }
 
-/* ===================================
-      CONTACT BUTTON
-=================================== */
+.hero-lawyer h1{
 
-.whatsapp-btn{
-
-    display:inline-block;
-
-    margin-top:25px;
-
-    padding:14px 32px;
-
-    background:#25D366;
-
-    color:#fff;
-
-    text-decoration:none;
-
-    border-radius:50px;
-
-    font-weight:bold;
+font-size:30px;
 
 }
 
-.whatsapp-btn:hover{
+.hero-lawyer p{
 
-    background:#1ebc59;
-
-    transform:translateY(-3px);
+font-size:15px;
 
 }
 
-/* ===================================
-      IMAGE EFFECT
-=================================== */
+}
 
-.partner-card img,
-.managing-card img{
+/*==================================================
+        SCROLLBAR
+==================================================*/
 
-    filter:brightness(98%);
+::-webkit-scrollbar{
+
+width:10px;
 
 }
 
-.partner-card:hover img,
-.managing-card:hover img{
+::-webkit-scrollbar-track{
 
-    filter:brightness(103%);
-
-}
-
-/* ===================================
-      FINAL FINISH
-=================================== */
-
-body{
-
-    overflow-x:hidden;
+background:#f0f0f0;
 
 }
 
-section:last-child{
+::-webkit-scrollbar-thumb{
 
-    margin-bottom:0;
+background:#d4af37;
 
-}
-
-footer{
-
-    border-top:4px solid #d4af37;
+border-radius:30px;
 
 }
 
-footer p{
+::-webkit-scrollbar-thumb:hover{
 
-    font-size:15px;
-
-    letter-spacing:.5px;
+background:#b89328;
 
 }
 
-.logo{
-
-    user-select:none;
-
-}
-
-.partner-card,
-.managing-card,
-.junior-card{
-
-    border:1px solid rgba(212,175,55,.15);
-
-}
-
-/* ===================================
-      END OF STYLE.CSS
-=================================== */
+/*==================================================
+            END CSS
+==================================================*/ 
