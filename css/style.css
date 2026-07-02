@@ -499,363 +499,540 @@ footer p{
     color:#ddd;
 
 }
-/* =========================
-   GLOBAL RESET
-========================= */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Segoe UI", Tahoma, sans-serif;
+/* ===================================
+        HOVER & ANIMATION
+=================================== */
+
+.partner-card,
+.managing-card,
+.junior-card{
+
+    transition:all .35s ease;
+
 }
 
-html {
-    scroll-behavior: smooth;
+.partner-card:hover,
+.managing-card:hover,
+.junior-card:hover{
+
+    transform:translateY(-10px);
+
 }
 
-body {
-    background: #f6f6f6;
-    color: #1c1c1c;
-    line-height: 1.6;
+.partner-card img,
+.managing-card img{
+
+    transition:transform .5s ease;
+
 }
 
-/* =========================
-   HEADER (PREMIUM GLASS STYLE)
-========================= */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(17, 17, 17, 0.92);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: #d4af37;
-    padding: 18px 40px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+.partner-card:hover img,
+.managing-card:hover img{
+
+    transform:scale(1.05);
+
 }
 
-header .logo {
-    font-size: 22px;
-    font-weight: bold;
-    letter-spacing: 1px;
+/* ===================================
+          GOLD LINE
+=================================== */
+
+.gold-line{
+
+    width:90px;
+
+    height:4px;
+
+    background:#d4af37;
+
+    margin:15px auto 50px;
+
+    border-radius:5px;
+
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 25px;
+/* ===================================
+        CARD TITLE
+=================================== */
+
+.partner-card h3,
+.managing-card h3{
+
+    min-height:70px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:0 15px;
+
+    text-align:center;
+
 }
 
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 15px;
-    transition: 0.3s;
+.junior-card h3{
+
+    min-height:60px;
+
+    display:flex;
+
+    align-items:center;
+
 }
 
-nav ul li a:hover {
-    color: #d4af37;
+/* ===================================
+        SHADOW
+=================================== */
+
+.partner-card{
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
 }
 
-/* =========================
-   HERO (LADY JUSTICE PREMIUM)
-========================= */
-.hero {
-    position: relative;
-    height: 92vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    overflow: hidden;
-    color: #fff;
+.managing-card{
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
 }
 
-/* background image */
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: url("justice.jpg") center/cover no-repeat;
-    transform: scale(1.05);
-    filter: brightness(0.85);
-    z-index: 1;
+.junior-card{
+
+    box-shadow:0 8px 18px rgba(0,0,0,.08);
+
 }
 
-/* overlay elegan */
-.hero::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: 2;
+/* ===================================
+       RESPONSIVE TABLET
+=================================== */
+
+@media(max-width:992px){
+
+.partner-grid{
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
-.hero-content {
-    position: relative;
-    z-index: 3;
-    max-width: 850px;
-    padding: 20px;
-    animation: fadeUp 1.2s ease-out;
+.junior-grid{
+
+grid-template-columns:repeat(2,1fr);
+
 }
 
-.hero h1 {
-    font-size: 54px;
-    color: #d4af37;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
+header{
+
+padding:18px 5%;
+
 }
 
-.hero p {
-    font-size: 18px;
-    color: #f1f1f1;
+.hero-lawyer h1{
+
+font-size:46px;
+
 }
 
-/* animasi */
-@keyframes fadeUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
-/* =========================
-   BUTTON PREMIUM
-========================= */
-.btn {
-    display: inline-block;
-    margin-top: 22px;
-    padding: 12px 28px;
-    background: #d4af37;
-    color: #111;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 0.3s;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.15);
+/* ===================================
+       RESPONSIVE MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+header{
+
+flex-direction:column;
+
+padding:20px;
+
 }
 
-.btn:hover {
-    background: #b8922e;
-    transform: translateY(-2px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+.logo{
+
+margin-bottom:15px;
+
+text-align:center;
+
 }
 
-/* =========================
-   SECTION GENERAL
-========================= */
-section {
-    padding: 75px 10%;
+nav{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:15px;
+
 }
 
-.section-title {
-    text-align: center;
-    font-size: 34px;
-    font-weight: 700;
-    margin-bottom: 45px;
+.partner-grid{
+
+grid-template-columns:1fr;
+
 }
 
-.section-title span {
-    color: #d4af37;
+.junior-grid{
+
+grid-template-columns:1fr;
+
 }
 
-.section-title::after {
-    content: "";
-    display: block;
-    width: 65px;
-    height: 3px;
-    background: #d4af37;
-    margin: 10px auto 0;
-    border-radius: 10px;
+.managing-card{
+
+width:100%;
+
+max-width:380px;
+
+margin:auto;
+
 }
 
-/* =========================
-   ABOUT SECTION
-========================= */
-.about {
-    display: flex;
-    gap: 40px;
-    align-items: center;
+.hero-lawyer{
+
+padding:90px 20px;
+
 }
 
-.about img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+.hero-lawyer h1{
+
+font-size:34px;
+
 }
 
-.about-text {
-    flex: 1;
+.hero-lawyer p{
+
+font-size:16px;
+
 }
 
-/* =========================
-   TEAM SECTION (FIX IMAGE FULL & UNIFORM)
-========================= */
-.team {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 25px;
+section{
+
+padding:60px 20px;
+
 }
 
-.card {
-    background: #fff;
-    border-radius: 14px;
-    overflow: hidden;
-    text-align: center;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
-    transition: 0.3s;
-    animation: cardFade 0.8s ease-in;
+section h2{
+
+font-size:30px;
+
 }
 
-.card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 28px rgba(0,0,0,0.15);
+.partner-card h3{
+
+font-size:22px;
+
 }
 
-/* gambar lawyer FULL tanpa crop wajah */
-.card img {
-    width: 100%;
-    height: 300px;
-    object-fit: contain;
-    background: #f2f2f2;
-    padding: 10px;
+.managing-card h3{
+
+font-size:24px;
+
 }
 
-/* teks card */
-.card h3 {
-    margin-top: 15px;
-    font-size: 18px;
 }
 
-.card p {
-    color: #777;
-    margin-bottom: 15px;
+/* ===================================
+        SMALL MOBILE
+=================================== */
+
+@media(max-width:480px){
+
+.hero-lawyer h1{
+
+font-size:28px;
+
 }
 
-/* animasi card */
-@keyframes cardFade {
-    from {
-        opacity: 0;
-        transform: scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+.logo{
+
+font-size:22px;
+
 }
 
-/* =========================
-   JUNIOR ASSOCIATES
-========================= */
-.junior {
-    background: #fff;
-    padding: 18px 20px;
-    border-left: 4px solid #d4af37;
-    margin-bottom: 15px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+nav a{
+
+font-size:15px;
+
 }
 
-/* =========================
-   SERVICES
-========================= */
-.services {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
+.partner-card h3{
+
+font-size:20px;
+
 }
 
-.service-box {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.junior-card h3{
+
+font-size:20px;
+
 }
 
-.service-box:hover {
-    background: #111;
-    color: #fff;
-    transform: translateY(-5px);
+footer{
+
+padding:40px 20px;
+
 }
 
-/* =========================
-   CONTACT FORM
-========================= */
-.contact-form {
-    background: #fff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+/* ===================================
+        SCROLLBAR
+=================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
 }
 
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
+::-webkit-scrollbar-track{
+
+    background:#f1f1f1;
+
 }
 
-.contact-form button {
-    background: #d4af37;
-    color: #111;
-    border: none;
-    padding: 12px 22px;
-    border-radius: 30px;
-    font-weight: bold;
-    cursor: pointer;
+::-webkit-scrollbar-thumb{
+
+    background:#d4af37;
+
+    border-radius:20px;
+
 }
 
-.contact-form button:hover {
-    background: #b8922e;
+::-webkit-scrollbar-thumb:hover{
+
+    background:#b89225;
+
 }
 
-/* =========================
-   FOOTER
-========================= */
-footer {
-    background: #111;
-    color: #aaa;
-    text-align: center;
-    padding: 25px;
-    margin-top: 60px;
+/* ===================================
+        TEXT SELECTION
+=================================== */
+
+::selection{
+
+    background:#d4af37;
+
+    color:#111;
+
 }
 
-footer span {
-    color: #d4af37;
+/* ===================================
+        SMOOTH ANIMATION
+=================================== */
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
-@media (max-width: 768px) {
+a{
 
-    header {
-        flex-direction: column;
-        text-align: center;
-        gap: 10px;
-    }
+    transition:.3s;
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .hero h1 {
-        font-size: 34px;
-    }
-
-    .about {
-        flex-direction: column;
-    }
 }
+
+button{
+
+    transition:.3s;
+
+    cursor:pointer;
+
+}
+
+/* ===================================
+        SECTION SPACING
+=================================== */
+
+.team{
+
+    margin-top:40px;
+
+    margin-bottom:80px;
+
+}
+
+.partner-grid{
+
+    align-items:stretch;
+
+}
+
+.partner-card{
+
+    height:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.partner-card h3{
+
+    flex:1;
+
+}
+
+.partner-card p{
+
+    margin-top:10px;
+
+}
+
+.managing-card{
+
+    margin:auto;
+
+}
+
+/* ===================================
+        TITLE STYLE
+=================================== */
+
+.title{
+
+    text-align:center;
+
+    font-size:52px;
+
+    color:#111;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.subtitle{
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:18px;
+
+    margin-bottom:60px;
+
+}
+
+/* ===================================
+       GOLD DIVIDER
+=================================== */
+
+.divider{
+
+    width:120px;
+
+    height:5px;
+
+    background:#d4af37;
+
+    margin:20px auto 60px;
+
+    border-radius:20px;
+
+}
+
+/* ===================================
+      CONTACT BUTTON
+=================================== */
+
+.whatsapp-btn{
+
+    display:inline-block;
+
+    margin-top:25px;
+
+    padding:14px 32px;
+
+    background:#25D366;
+
+    color:#fff;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:bold;
+
+}
+
+.whatsapp-btn:hover{
+
+    background:#1ebc59;
+
+    transform:translateY(-3px);
+
+}
+
+/* ===================================
+      IMAGE EFFECT
+=================================== */
+
+.partner-card img,
+.managing-card img{
+
+    filter:brightness(98%);
+
+}
+
+.partner-card:hover img,
+.managing-card:hover img{
+
+    filter:brightness(103%);
+
+}
+
+/* ===================================
+      FINAL FINISH
+=================================== */
+
+body{
+
+    overflow-x:hidden;
+
+}
+
+section:last-child{
+
+    margin-bottom:0;
+
+}
+
+footer{
+
+    border-top:4px solid #d4af37;
+
+}
+
+footer p{
+
+    font-size:15px;
+
+    letter-spacing:.5px;
+
+}
+
+.logo{
+
+    user-select:none;
+
+}
+
+.partner-card,
+.managing-card,
+.junior-card{
+
+    border:1px solid rgba(212,175,55,.15);
+
+}
+
+/* ===================================
+      END OF STYLE.CSS
+=================================== */
